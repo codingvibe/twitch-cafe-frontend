@@ -12,7 +12,7 @@
 		if (!$authToken) {
 			const loginUrl = $page.url.href.startsWith("http://localhost") ?
 							"http://localhost:8080/v1/api/login" :
-							"https://twitchbotapi.codingvibe.dev/v1/api/login";
+							"https://twitchbotapi.codingvibe.dev/prefs/v1/api/login";
 			return goto(loginUrl);
 		}
     });
@@ -33,7 +33,7 @@
 							 });
 		const userPrefsUrl = $page.url.href.startsWith("http://localhost") ?
 							"http://localhost:8080/v1/api/prefs" :
-							"https://twitchbotapi.codingvibe.dev/v1/api/prefs";
+							"https://twitchbotapi.codingvibe.dev/prefs/v1/api/prefs";
 		return fetch(userPrefsUrl, 
 			{
 				mode: 'cors',
@@ -72,7 +72,7 @@
 		const token = $authToken;
 		const userPrefsUrl = $page.url.href.startsWith("http://localhost") ?
 							"http://localhost:8080/v1/api/prefs" :
-							"https://twitchbotapi.codingvibe.dev/v1/api/prefs";
+							"https://twitchbotapi.codingvibe.dev/prefs/v1/api/prefs";
 		return fetch(userPrefsUrl, 
 			{
 				mode: 'cors',
@@ -105,7 +105,7 @@
     async function getAllCafePrefs() {
 		const allPrefsUrl = $page.url.href.startsWith("http://localhost") ?
 							"http://localhost:8080/v1/api/cafe/prefs" :
-							"https://twitchbotapi.codingvibe.dev/v1/api/cafe/prefs";
+							"https://twitchbotapi.codingvibe.dev/prefs/v1/api/cafe/prefs";
 		return fetch(allPrefsUrl, 
 			{
 				mode: 'cors',

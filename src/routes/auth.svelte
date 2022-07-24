@@ -19,7 +19,7 @@ import { goto } from '$app/navigation';
 
 		const authUrl = $page.url.href.startsWith("http://localhost") ?
 							"http://localhost:8080/v1/api/authenticate" :
-							"https://twitchbotapi.codingvibe.dev/v1/api/authenticate";
+							"https://twitchbotapi.codingvibe.dev/prefs/v1/api/authenticate";
 		const hashParams = new URLSearchParams(window.location.hash.replace("#", "?"));
 		const twitchAccessToken = hashParams.get("access_token");
 		const twitchState = hashParams.get("state");
