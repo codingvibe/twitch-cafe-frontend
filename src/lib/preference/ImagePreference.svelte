@@ -43,7 +43,7 @@
         </picture>
         <div class="image-display">
             <picture>
-                <img class="choice-image" src={`images/${selectedValue}`} alt={selectedValue} />
+                <img class="choice-image" src={`/${selectedValue}`} alt={selectedValue} />
             </picture>
         </div>
         <picture>
