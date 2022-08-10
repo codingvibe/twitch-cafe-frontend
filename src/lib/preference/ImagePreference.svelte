@@ -1,5 +1,6 @@
 <script>
     import {nameEnumToDisplayName, getDescriptionFromNameEnum} from "$lib/utils/utils";
+    import leftArrow from "$lib/assets/left.svg"
 
 	export let name;
 	export let values;
@@ -38,15 +39,15 @@
     <p class="description">{getDescriptionFromNameEnum(name)}</p>
     <div class="choice-carousel">
         <picture>
-            <img class:disabled={values.length === 1} on:click={()=>{switchChoiceImage(true)}} id="left" class="nav-icon" src="left.svg" alt="left arrow to switch images"/>
+            <img class:disabled={values.length === 1} on:click={()=>{switchChoiceImage(true)}} id="left" class="nav-icon" src={leftArrow} alt="left arrow to switch images"/>
         </picture>
         <div class="image-display">
             <picture>
-                <img class="choice-image" src={selectedValue} alt={selectedValue} />
+                <img class="choice-image" src={`images/${selectedValue}`} alt={selectedValue} />
             </picture>
         </div>
         <picture>
-            <img class:disabled={values.length === 1} on:click={()=>{switchChoiceImage(false)}} id="right" class="nav-icon" src="left.svg" alt="right arrow to switch images"/>
+            <img class:disabled={values.length === 1} on:click={()=>{switchChoiceImage(false)}} id="right" class="nav-icon" src={leftArrow} alt="right arrow to switch images"/>
         </picture>
     </div>
 </div>
