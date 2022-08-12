@@ -32,6 +32,17 @@
 
         selectedValue = values[imageIndex];
     }
+
+    function getUrlFromImageName(name) {
+        switch(name) {
+            case "goku":
+                return "/goku.gif";
+            case "customer":
+                return "/customer.png"
+            default:
+                return "/unavailable.svg"
+        }
+    }
 </script>
 
 <div class='image-preference'>
@@ -43,7 +54,7 @@
         </picture>
         <div class="image-display">
             <picture>
-                <img class="choice-image" src={`/${selectedValue}`} alt={selectedValue} />
+                <img class="choice-image" src={getUrlFromImageName(selectedValue)} alt={selectedValue} />
             </picture>
         </div>
         <picture>
