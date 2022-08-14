@@ -15,3 +15,16 @@ export function getDescriptionFromNameEnum(nameEnum) {
         default: throw new Error(`Unknown preference enum ${nameEnum}`);
     }
 }
+
+export function getUrlFromImageName(name) {
+    switch(name) {
+        case "goku":
+            return "/goku.gif";
+        case "customer":
+            return "/customer.png";
+        case "robomaid":
+            return "/robomaid.gif";
+        default:
+            return "/unavailable.svg";
+    }
+}

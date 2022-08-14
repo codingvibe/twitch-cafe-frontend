@@ -1,5 +1,5 @@
 <script>
-    import {nameEnumToDisplayName, getDescriptionFromNameEnum} from "$lib/utils/utils";
+    import {nameEnumToDisplayName, getDescriptionFromNameEnum, getUrlFromImageName} from "$lib/utils/utils";
     import leftArrow from "$lib/assets/left.svg"
 
 	export let name;
@@ -31,17 +31,6 @@
         if(imageIndex === values.length) imageIndex = 0;
 
         selectedValue = values[imageIndex];
-    }
-
-    function getUrlFromImageName(name) {
-        switch(name) {
-            case "goku":
-                return "/goku.gif";
-            case "customer":
-                return "/customer.png"
-            default:
-                return "/unavailable.svg"
-        }
     }
 </script>
 
